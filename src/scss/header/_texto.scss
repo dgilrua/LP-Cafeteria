@@ -1,0 +1,17 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.textoHeader {
+    h1 {
+        margin-top: 5rem;
+        text-align: center;
+        color: v.$blanco;
+        text-transform: uppercase;
+        line-height: 1.5;
+        
+
+        @include m.tablet {
+            margin-top: 10rem;
+        }
+    }
+}

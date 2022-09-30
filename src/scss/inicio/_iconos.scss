@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.iconos {
+    padding-top: 5rem;
+
+    @include m.tablet {
+        @include m.grid(3, 2rem);
+    }
+
+    .lista-icono {
+        img {
+            margin: 0 auto;
+            width: 12rem;
+        }
+        p {
+            font-size: 3rem;
+            color: v.$primario;
+            font-family: v.$fuente_cursiva;
+        }
+    }
+}
+

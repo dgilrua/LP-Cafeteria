@@ -1,0 +1,31 @@
+@use 'base/mixins' as m;
+
+.menu_grid {
+    background-image: url(../img/cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    aspect-ratio: 5/14;
+
+    @include m.tablet {
+        aspect-ratio: 5/7;
+    }
+
+    @include m.desktop {
+        aspect-ratio: 12/5;
+        background-size: 40%;
+        background-position: right bottom;
+    }
+    
+    @include m.desktop {
+        display: grid;
+        @include m.grid (2, 5rem)
+    }
+
+    .menu__texto {
+        p {
+            text-align: left;
+            font-size: 2rem;
+        }
+    }
+}
